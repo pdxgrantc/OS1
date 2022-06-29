@@ -1,4 +1,4 @@
-make --dry-run --always-make --keep-going --print-directory
+make --dry-run --keep-going --print-directory
 make: Entering directory `/nfs/stak/users/conkling/code/third_year/OS1'
 make: Leaving directory `/nfs/stak/users/conkling/code/third_year/OS1'
  

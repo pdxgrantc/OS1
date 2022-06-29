@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "linked_list.h"
 #include "dynamic_ary.h"
 
@@ -24,9 +25,16 @@ void dynamic_ary_driver() {
 
 	for (i = 0; i < 5; i++)
 	{
-		push_front_ary(ary, i);
+		int *x = malloc(sizeof(int));
+		*x = i;
+		push_front_ary(ary, x);
 	}
-	print_ary(ary);
+	for (size_t i = 0; i < get_length_ary(ary); i++)
+	{
+		printf("%d\n", *(int*)get_item_ary(ary, i));
+		free(get_item_ary(ary, i));
+	}
+	
 	delete_ary(ary);
 }
 
