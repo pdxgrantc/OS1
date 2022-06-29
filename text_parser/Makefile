@@ -1,4 +1,4 @@
-CC=gcc 
+CC=gcc -std=c99 
 exeFile = app
 
 $(exeFile): main.o text_parser.o dynamic_ary.o
