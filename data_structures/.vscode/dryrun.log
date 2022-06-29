@@ -1,0 +1,8 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/nfs/stak/users/conkling/code/third_year/OS1/data_structures'
+gcc  -c main.c
+gcc  -c linked_list.c
+gcc  -c dynamic_ary.c
+gcc  main.o linked_list.o dynamic_ary.o -o app
+make: Leaving directory `/nfs/stak/users/conkling/code/third_year/OS1/data_structures'
+ 

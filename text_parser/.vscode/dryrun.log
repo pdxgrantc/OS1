@@ -1,0 +1,8 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/nfs/stak/users/conkling/code/third_year/OS1/text_parser'
+gcc  -c main.c
+gcc  -c text_parser.c
+gcc  -c dynamic_ary.c
+gcc  main.o text_parser.o dynamic_ary.o -o app
+make: Leaving directory `/nfs/stak/users/conkling/code/third_year/OS1/text_parser'
+ 

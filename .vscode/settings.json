@@ -1,0 +1,8 @@
+{
+    "makefile.extensionOutputFolder": "./.vscode",
+    "files.associations": {
+        "*.ejs": "html",
+        "dynamic_ary.h": "c",
+        "stdio.h": "c"
+    }
+}
