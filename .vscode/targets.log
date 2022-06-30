@@ -5,9 +5,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
- 
 
-# Make data base, printed on Thu Jun 30 08:24:58 2022
+# Make data base, printed on Thu Jun 30 08:36:15 2022
 
 # Variables
 
@@ -67,9 +66,9 @@ LESSOPEN = ||/usr/bin/lesspipe.sh %s
 # environment
 VSCODE_CWD = /nfs/stak/users/conkling
 # environment
-SSH_CONNECTION = 10.160.222.224 65383 128.193.54.168 22
+SSH_CONNECTION = 10.251.4.81 52433 128.193.54.168 22
 # environment
-PATH = /nfs/stak/users/conkling/.vscode-server/bin/ccbaa2d27e38e5afa3e5c21c1c7bef4657064247/bin:/bin:/sbin:/usr/local/bin:/usr/bin:/usr/local/apps/bin:/nfs/stak/users/conkling/bin:.
+PATH = /nfs/stak/users/conkling/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/bin/remote-cli:/bin:/sbin:/usr/local/bin:/usr/bin:/usr/local/apps/bin:/nfs/stak/users/conkling/bin:.
 # environment
 LMOD_CMD = /usr/share/lmod/lmod/libexec/lmod
 # environment
@@ -95,13 +94,13 @@ VSCODE_PIPE_LOGGING = true
 # environment
 PWD = /nfs/stak/users/conkling/code/third_year/os1
 # environment
-VSCODE_IPC_HOOK_CLI = /run/user/14653/vscode-ipc-91dd5520-10c6-4e35-a6ab-834fd897686d.sock
+VSCODE_IPC_HOOK_CLI = /run/user/14653/vscode-ipc-7dc36815-7238-415d-8be0-4e392ec929af.sock
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
 MANPATH = /usr/local/man:/usr/man:/usr/share/man
 # environment
-VSCODE_AMD_ENTRYPOINT = vs/server/remoteExtensionHostProcess
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
 HOME = /nfs/stak/users/conkling
 # environment
@@ -137,7 +136,7 @@ MAKECMDGOALS := all
 # environment
 SHLVL = 5
 # environment
-XDG_SESSION_ID = 12702
+XDG_SESSION_ID = 12716
 # environment
 USER = conkling
 # environment
@@ -166,7 +165,7 @@ MAKEFLAGS = Rrqp
 # environment
 MFLAGS = -Rrqp
 # environment
-SSH_CLIENT = 10.160.222.224 65383 22
+SSH_CLIENT = 10.251.4.81 52433 22
 # environment
 MAIL = /var/spool/mail/conkling
 # environment
@@ -174,9 +173,11 @@ LOADEDMODULES =
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # environment
-BROWSER = /nfs/stak/users/conkling/.vscode-server/bin/ccbaa2d27e38e5afa3e5c21c1c7bef4657064247/bin/helpers/browser.sh
+BROWSER = /nfs/stak/users/conkling/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/bin/helpers/browser.sh
 # environment
 LMOD_PKG = /usr/share/lmod/lmod
+# environment
+VSCODE_HANDLES_SIGPIPE = true
 # default
 MAKEFILES := 
 # automatic
@@ -201,8 +202,6 @@ LMOD_ROOT = /usr/share/lmod
 LMOD_SETTARG_FULL_SUPPORT = no
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
-# environment
-VSCODE_INJECT_NODE_MODULE_LOOKUP_PATH = /nfs/stak/users/conkling/.vscode-server/bin/ccbaa2d27e38e5afa3e5c21c1c7bef4657064247/remote/node_modules
 # environment
 MORE = -c
 # environment
@@ -283,15 +282,15 @@ GNUmakefile:
 # No general (`VPATH' variable) search path.
 
 # # of strings in strcache: 0 / lookups = 19 / hits = 19
+ 
+make: *** No rule to make target `all'.  Stop.
+
 # # of strcache buffers: 1 (* 8176 B/buffer = 8176 B)
 # strcache used: total = 0 (149) / max = 0 / min = 8176 / avg = 0
 # strcache free: total = 0 (8027) / max = 0 / min = 8176 / avg = 0
 
 # strcache hash-table stats:
 # Load=16/8192=0%, Rehash=0, Collisions=1/19=5%
-# Finished Make data base on Thu Jun 30 08:24:58 2022
- 
-make: *** No rule to make target `all'.  Stop.
-
+# Finished Make data base on Thu Jun 30 08:36:16 2022
 
  

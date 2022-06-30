@@ -33,24 +33,19 @@ void driver()
 int arg_parser(struct Ary *ary)
 {
     char *text = (char *)(get_item_ary(ary, 0));
-    char *str = malloc(4);
-    strncpy(str, text, 4);
+    char *str = malloc(strlen(text));
+    strncpy(str, text, strlen(text));
     if (strncmp(str, "exit", 4) == 0)
     {
         return 0;
+    }
+    else if (strncmp(str, "clear", 5) == 0) {
+        ls(ary);
     }
     else if (strncmp(str, "ls", 2) == 0) {
         ls(ary);
     }
     return 1;
-    /*
-    if (get_length_ary(ary) == 1) {
-        single_arg(ary, cont);
-    }
-    else {
-        multi_arg(ary, cont);
-    }
-    */
 }
 
 void ls(struct Ary *ary)
