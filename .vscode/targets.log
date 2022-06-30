@@ -7,7 +7,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # There is NO WARRANTY, to the extent permitted by law.
  
 
-# Make data base, printed on Wed Jun 29 12:06:31 2022
+# Make data base, printed on Thu Jun 30 08:24:58 2022
 
 # Variables
 
@@ -36,7 +36,7 @@ MODULEPATH = /usr/local/apps/modulefiles:/etc/modulefiles:/usr/share/modulefiles
 # default
 MAKE_VERSION := 3.82
 # makefile
-CURDIR := /nfs/stak/users/conkling/code/third_year/OS1
+CURDIR := /nfs/stak/users/conkling/code/third_year/os1
 # makefile
 SHELL = /bin/sh
 # environment
@@ -67,9 +67,9 @@ LESSOPEN = ||/usr/bin/lesspipe.sh %s
 # environment
 VSCODE_CWD = /nfs/stak/users/conkling
 # environment
-SSH_CONNECTION = 10.251.58.25 57025 128.193.54.168 22
+SSH_CONNECTION = 10.160.222.224 65383 128.193.54.168 22
 # environment
-PATH = /nfs/stak/users/conkling/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/bin/remote-cli:/bin:/sbin:/usr/local/bin:/usr/bin:/usr/local/apps/bin:/nfs/stak/users/conkling/bin:.
+PATH = /nfs/stak/users/conkling/.vscode-server/bin/ccbaa2d27e38e5afa3e5c21c1c7bef4657064247/bin:/bin:/sbin:/usr/local/bin:/usr/bin:/usr/local/apps/bin:/nfs/stak/users/conkling/bin:.
 # environment
 LMOD_CMD = /usr/share/lmod/lmod/libexec/lmod
 # environment
@@ -93,15 +93,15 @@ KDEDIRS = /usr
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-PWD = /nfs/stak/users/conkling/code/third_year/OS1
+PWD = /nfs/stak/users/conkling/code/third_year/os1
 # environment
-VSCODE_IPC_HOOK_CLI = /run/user/14653/vscode-ipc-eae6fffd-2c86-4ac8-ab3c-e5aab3bce4f2.sock
+VSCODE_IPC_HOOK_CLI = /run/user/14653/vscode-ipc-91dd5520-10c6-4e35-a6ab-834fd897686d.sock
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
 MANPATH = /usr/local/man:/usr/man:/usr/share/man
 # environment
-VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+VSCODE_AMD_ENTRYPOINT = vs/server/remoteExtensionHostProcess
 # environment
 HOME = /nfs/stak/users/conkling
 # environment
@@ -137,7 +137,7 @@ MAKECMDGOALS := all
 # environment
 SHLVL = 5
 # environment
-XDG_SESSION_ID = 11879
+XDG_SESSION_ID = 12702
 # environment
 USER = conkling
 # environment
@@ -166,7 +166,7 @@ MAKEFLAGS = Rrqp
 # environment
 MFLAGS = -Rrqp
 # environment
-SSH_CLIENT = 10.251.58.25 57025 22
+SSH_CLIENT = 10.160.222.224 65383 22
 # environment
 MAIL = /var/spool/mail/conkling
 # environment
@@ -174,11 +174,9 @@ LOADEDMODULES =
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # environment
-BROWSER = /nfs/stak/users/conkling/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/bin/helpers/browser.sh
+BROWSER = /nfs/stak/users/conkling/.vscode-server/bin/ccbaa2d27e38e5afa3e5c21c1c7bef4657064247/bin/helpers/browser.sh
 # environment
 LMOD_PKG = /usr/share/lmod/lmod
-# environment
-VSCODE_HANDLES_SIGPIPE = true
 # default
 MAKEFILES := 
 # automatic
@@ -204,6 +202,8 @@ LMOD_SETTARG_FULL_SUPPORT = no
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
 # environment
+VSCODE_INJECT_NODE_MODULE_LOOKUP_PATH = /nfs/stak/users/conkling/.vscode-server/bin/ccbaa2d27e38e5afa3e5c21c1c7bef4657064247/remote/node_modules
+# environment
 MORE = -c
 # environment
 QTINC = /usr/lib64/qt-3.3/include
@@ -224,9 +224,9 @@ VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 
 # Directories
 
-# . (device 41, inode 1177953843): 7 files, no impossibilities.
+# . (device 41, inode 1177953843): 8 files, no impossibilities.
 
-# 7 files, no impossibilities in 1 directories.
+# 8 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -282,15 +282,16 @@ GNUmakefile:
 
 # No general (`VPATH' variable) search path.
 
-# # of strings in strcache: 0 / lookups = 18 / hits = 18
+# # of strings in strcache: 0 / lookups = 19 / hits = 19
 # # of strcache buffers: 1 (* 8176 B/buffer = 8176 B)
-# strcache used: total = 0 (140) / max = 0 / min = 8176 / avg = 0
-# strcache free: total = 0 (8036) / max = 0 / min = 8176 / avg = 0
+# strcache used: total = 0 (149) / max = 0 / min = 8176 / avg = 0
+# strcache free: total = 0 (8027) / max = 0 / min = 8176 / avg = 0
 
 # strcache hash-table stats:
-# Load=15/8192=0%, Rehash=0, Collisions=1/18=6%
-# Finished Make data base on Wed Jun 29 12:06:31 2022
-
+# Load=16/8192=0%, Rehash=0, Collisions=1/19=5%
+# Finished Make data base on Thu Jun 30 08:24:58 2022
  
 make: *** No rule to make target `all'.  Stop.
 
+
+ 

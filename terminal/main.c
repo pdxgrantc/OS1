@@ -6,9 +6,8 @@
 #include "dynamic_ary.h"
 
 void driver();
-void arg_parser(struct Ary *ary, int *cont);
-void single_arg(struct Ary *ary, int *cont);
-void multi_arg(struct Ary *ary, int *cont);
+int arg_parser(struct Ary *ary);
+void ls(struct Ary *ary);
 
 int main()
 {
@@ -27,22 +26,23 @@ void driver()
         struct Ary *ary = new_ary();
         string_pareser(text, ary);
         int i;
-        for (i = 0; i < get_length_ary(ary); i++)
-        {
-            //printf("Number %d: %s\n", (i + 1), (char *)(get_item_ary(ary, i)));
-        }
-        arg_parser(ary, &cont);
+        cont = arg_parser(ary);
     }
 }
 
-void arg_parser(struct Ary *ary, int *cont)
+int arg_parser(struct Ary *ary)
 {
     char *text = (char *)(get_item_ary(ary, 0));
-    if ((text[0] == 101) || (text[1] == 120) || (text[2] == 105) || (text[3] == 116))
+    char *str = malloc(4);
+    strncpy(str, text, 4);
+    if (strncmp(str, "exit", 4) == 0)
     {
-        *cont = 0;
-        printf("Exiting...\n");
+        return 0;
     }
+    else if (strncmp(str, "ls", 2) == 0) {
+        ls(ary);
+    }
+    return 1;
     /*
     if (get_length_ary(ary) == 1) {
         single_arg(ary, cont);
@@ -53,16 +53,7 @@ void arg_parser(struct Ary *ary, int *cont)
     */
 }
 
-void single_arg(struct Ary *ary, int *cont)
+void ls(struct Ary *ary)
 {
-    if (get_item_ary(ary, 0) == "exit")
-    {
-        *cont = 0;
-        printf("Exiting...\n");
-    }
-}
-
-void multi_arg(struct Ary *ary, int *cont)
-{
-    return;
+    printf("ls\n");
 }

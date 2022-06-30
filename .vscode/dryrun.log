@@ -1,6 +1,7 @@
-make --dry-run --keep-going --print-directory
-make: Entering directory `/nfs/stak/users/conkling/code/third_year/OS1'
-make: Leaving directory `/nfs/stak/users/conkling/code/third_year/OS1'
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/nfs/stak/users/conkling/code/third_year/os1'
  
 make: *** No targets specified and no makefile found.  Stop.
 
+make: Leaving directory `/nfs/stak/users/conkling/code/third_year/os1'
+ 
