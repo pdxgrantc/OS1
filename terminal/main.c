@@ -10,25 +10,38 @@ int arg_parser(struct Ary *command);
 void clear(struct Ary *command);
 void ls(struct Ary *command);
 
+struct Current_dir {
+    char *path;
+    struct Ary *path_names;
+};
+
 int main()
 {
     driver();
+    //struct Current_dir *dir = malloc(sizeof(struct Current_dir));
     return 0;
 }
 
 void driver()
 {
     int cont = 1;
+    char *text = malloc(sizeof(char) * 100);
     while (cont == 1)
     {
         printf("$ ");
-        char *text = malloc(sizeof(char) * 100);
+        
         fgets(text, 100, stdin);
         struct Ary *command = new_ary();
         string_pareser(text, command);
         int i;
         cont = arg_parser(command);
+        for (i=0; i<get_length_ary(command); i++)
+        {
+            free(get_item_ary(command, i));
+        }
+        delete_ary(command);
     }
+    free(text);
 }
 
 int arg_parser(struct Ary *command)
@@ -46,6 +59,7 @@ int arg_parser(struct Ary *command)
     else if (strncmp(str, "ls", 2) == 0) {
         ls(command);
     }
+    free(str);
     return 1;
 }
 

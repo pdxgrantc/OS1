@@ -19,8 +19,9 @@ void string_pareser(char *input, struct Ary *ary)
             if ((input[i] == ' ') || (input[i] == '\t'))
             {
                 second = i;
-                char *str = malloc(second - first);
-                strncpy(str, input + first, second - first);
+                char *str = malloc(second - first + 1);
+                strncpy(str, &input[first], second - first);
+                str[second - first] = '\0';
                 push_back_ary(ary, str);
                 first = second + 1;
             }
@@ -29,8 +30,9 @@ void string_pareser(char *input, struct Ary *ary)
     if (found == 1)
     {
         second = i;
-        char *str = malloc(second - first);
+        char *str = malloc(second - first + 1);
         strncpy(str, input + first, second - first);
+        str[second - first] = '\0';
         push_back_ary(ary, str);
     }
 }
