@@ -6,8 +6,9 @@
 #include "dynamic_ary.h"
 
 void driver();
-int arg_parser(struct Ary *ary);
-void ls(struct Ary *ary);
+int arg_parser(struct Ary *command);
+void clear(struct Ary *command);
+void ls(struct Ary *command);
 
 int main()
 {
@@ -23,16 +24,16 @@ void driver()
         printf("$ ");
         char *text = malloc(sizeof(char) * 100);
         fgets(text, 100, stdin);
-        struct Ary *ary = new_ary();
-        string_pareser(text, ary);
+        struct Ary *command = new_ary();
+        string_pareser(text, command);
         int i;
-        cont = arg_parser(ary);
+        cont = arg_parser(command);
     }
 }
 
-int arg_parser(struct Ary *ary)
+int arg_parser(struct Ary *command)
 {
-    char *text = (char *)(get_item_ary(ary, 0));
+    char *text = (char *)(get_item_ary(command, 0));
     char *str = malloc(strlen(text));
     strncpy(str, text, strlen(text));
     if (strncmp(str, "exit", 4) == 0)
@@ -40,15 +41,20 @@ int arg_parser(struct Ary *ary)
         return 0;
     }
     else if (strncmp(str, "clear", 5) == 0) {
-        ls(ary);
+        clear(command);
     }
     else if (strncmp(str, "ls", 2) == 0) {
-        ls(ary);
+        ls(command);
     }
     return 1;
 }
 
-void ls(struct Ary *ary)
+void clear(struct Ary *command)
+{
+    system("@cls||clear");
+}
+
+void ls(struct Ary *command)
 {
     printf("ls\n");
 }
