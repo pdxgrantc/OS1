@@ -7,14 +7,9 @@
 #include "commands.h"
 
 void driver();
-int arg_parser(struct Ary *command);
+int arg_parser(struct Ary *command, struct Current_dir *dir);
 void clear(struct Ary *command);
 void ls(struct Ary *command);
-
-struct Current_dir {
-    char *path;
-    struct Ary *path_names;
-};
 
 int main()
 {
@@ -27,6 +22,7 @@ void driver()
 {
     int cont = 1;
     char *text = malloc(sizeof(char) * 100);
+    struct Current_dir *dir = malloc(sizeof(struct Current_dir));
     while (cont == 1)
     {
         printf("$ ");
@@ -35,17 +31,18 @@ void driver()
         struct Ary *command = new_ary();
         string_pareser(text, command);
         int i;
-        cont = arg_parser(command);
+        cont = arg_parser(command, dir);
         for (i=0; i<get_length_ary(command); i++)
         {
             free(get_item_ary(command, i));
         }
         delete_ary(command);
     }
+    free(dir);
     free(text);
 }
 
-int arg_parser(struct Ary *command)
+int arg_parser(struct Ary *command, struct Current_dir *dir)
 {
     char *text = (char *)(get_item_ary(command, 0));
     char *str = malloc(strlen(text));
@@ -60,6 +57,9 @@ int arg_parser(struct Ary *command)
     }
     else if (strncmp(str, "ls", 2) == 0) {
         ls(command);
+    }
+    else if (strncmp(str, "pwd", 3) == 0) {
+        pwd(command, dir);
     }
     free(str);
     return 1;
