@@ -7,6 +7,14 @@
 
 #include "dynamic_ary.h"
 
-void string_pareser(char *input, struct Ary *ary);
+/*
+ * Function: string_pareser
+ * ---------------------------
+ * Parses a string into an array of strings.
+ * Returns nothing.
+ * char *input str: the string to be parsed.
+ * struct Ary *ary: the array to be referenced.
+ */
+void string_pareser(char *input str, struct Ary *ary);
 
 #endif

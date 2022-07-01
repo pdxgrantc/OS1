@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Jul  1 12:49:04 2022
+# Make data base, printed on Fri Jul  1 15:17:59 2022
 
 # Variables
 
@@ -40,9 +40,6 @@ CURDIR := /nfs/stak/users/conkling/code/third_year/os1
 SHELL = /bin/sh
 # environment
 LMOD_DIR = /usr/share/lmod/lmod/libexec
- 
-make: *** No rule to make target `all'.  Stop.
-
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
 # environment
@@ -285,6 +282,9 @@ GNUmakefile:
 # VPATH Search Paths
 
 # No `vpath' search paths.
+ 
+make: *** No rule to make target `all'.  Stop.
+
 
 # No general (`VPATH' variable) search path.
 
@@ -295,6 +295,6 @@ GNUmakefile:
 
 # strcache hash-table stats:
 # Load=16/8192=0%, Rehash=0, Collisions=1/19=5%
-# Finished Make data base on Fri Jul  1 12:49:04 2022
+# Finished Make data base on Fri Jul  1 15:17:59 2022
 
  

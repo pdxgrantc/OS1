@@ -6,12 +6,12 @@
 #include "dynamic_ary.h"
 #include "commands.h"
 
-void clear(struct Ary *command)
+void clear()
 {
     system("@cls||clear");
 }
 
-void ls(struct Ary *command)
+void ls()
 {
     DIR *d;
     struct dirent *dir;
@@ -27,7 +27,7 @@ void ls(struct Ary *command)
     }
 }
 
-void pwd(struct Ary *command, struct Current_dir *dir)
+void pwd(struct Current_dir *dir)
 {
     printf("%s\n", dir->path);
 }
