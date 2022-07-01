@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <unistd.h>
 
 #include "text_parser.h"
 #include "dynamic_ary.h"
@@ -8,8 +9,8 @@
 
 void driver();
 int arg_parser(struct Ary *command, struct Current_dir *dir);
-void clear(struct Ary *command);
-void ls(struct Ary *command);
+void setup_driver(struct Current_dir *dir);
+void remove_driver(char *text, struct Current_dir *dir);
 
 int main()
 {
@@ -23,6 +24,7 @@ void driver()
     int cont = 1;
     char *text = malloc(sizeof(char) * 100);
     struct Current_dir *dir = malloc(sizeof(struct Current_dir));
+    setup_driver(dir);
     while (cont == 1)
     {
         printf("$ ");
@@ -38,8 +40,7 @@ void driver()
         }
         delete_ary(command);
     }
-    free(dir);
-    free(text);
+    remove_driver(text, dir);
 }
 
 int arg_parser(struct Ary *command, struct Current_dir *dir)
@@ -61,6 +62,28 @@ int arg_parser(struct Ary *command, struct Current_dir *dir)
     else if (strncmp(str, "pwd", 3) == 0) {
         pwd(command, dir);
     }
+    else {
+        printf("Unknown command\n");
+    }
     free(str);
     return 1;
+}
+
+void setup_driver(struct Current_dir *dir)
+{
+    dir->path = malloc(sizeof(char) * 100);
+    dir->path_names = new_ary();
+    dir->path = getcwd(dir->path, 100);
+    char *str = malloc(sizeof(char) * 100);
+    strncpy(str, dir->path, strlen(dir->path));
+    push_back_ary(dir->path_names, str);
+    free(str);
+}
+
+void remove_driver(char *text, struct Current_dir *dir)
+{
+    free(text);
+    free(dir->path);
+    delete_ary(dir->path_names);
+    free(dir);
 }
