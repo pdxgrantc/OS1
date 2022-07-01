@@ -60,7 +60,7 @@ int arg_parser(struct Ary *command, struct Current_dir *dir)
         ls(command);
     }
     else if (strncmp(str, "pwd", 3) == 0) {
-        pwd(command, dir);
+        pwd(dir);
     }
     else {
         printf("Unknown command\n");
