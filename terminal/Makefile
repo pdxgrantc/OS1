@@ -1,8 +1,9 @@
-CC=gcc -std=c99 
+CC=gcc -std=c99
 exeFile = app
 
 $(exeFile): main.o text_parser.o dynamic_ary.o commands.o
 	$(CC) main.o text_parser.o dynamic_ary.o commands.o -o $(exeFile)
+	rm -f *.o
 	
 main.o: main.c
 	$(CC) -c main.c
