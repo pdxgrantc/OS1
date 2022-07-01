@@ -4,6 +4,7 @@
 
 #include "text_parser.h"
 #include "dynamic_ary.h"
+#include "commands.h"
 
 void driver();
 int arg_parser(struct Ary *command);
@@ -51,6 +52,7 @@ int arg_parser(struct Ary *command)
     strncpy(str, text, strlen(text));
     if (strncmp(str, "exit", 4) == 0)
     {
+        free(str);
         return 0;
     }
     else if (strncmp(str, "clear", 5) == 0) {
@@ -61,14 +63,4 @@ int arg_parser(struct Ary *command)
     }
     free(str);
     return 1;
-}
-
-void clear(struct Ary *command)
-{
-    system("@cls||clear");
-}
-
-void ls(struct Ary *command)
-{
-    printf("ls\n");
 }

@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jun 30 08:36:15 2022
+# Make data base, printed on Fri Jul  1 12:49:04 2022
 
 # Variables
 
@@ -40,6 +40,9 @@ CURDIR := /nfs/stak/users/conkling/code/third_year/os1
 SHELL = /bin/sh
 # environment
 LMOD_DIR = /usr/share/lmod/lmod/libexec
+ 
+make: *** No rule to make target `all'.  Stop.
+
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
 # environment
@@ -56,6 +59,8 @@ endef
 # environment
 XDG_DATA_DIRS = /nfs/stak/users/conkling/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
 # environment
+AUTOJUMP_SOURCED = 1
+# environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
 PERL_MM_OPT = INSTALL_BASE=/nfs/stak/users/conkling/perl5
@@ -66,7 +71,7 @@ LESSOPEN = ||/usr/bin/lesspipe.sh %s
 # environment
 VSCODE_CWD = /nfs/stak/users/conkling
 # environment
-SSH_CONNECTION = 10.251.4.81 52433 128.193.54.168 22
+SSH_CONNECTION = 10.207.18.209 49998 128.193.54.182 22
 # environment
 PATH = /nfs/stak/users/conkling/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/bin/remote-cli:/bin:/sbin:/usr/local/bin:/usr/bin:/usr/local/apps/bin:/nfs/stak/users/conkling/bin:.
 # environment
@@ -94,7 +99,7 @@ VSCODE_PIPE_LOGGING = true
 # environment
 PWD = /nfs/stak/users/conkling/code/third_year/os1
 # environment
-VSCODE_IPC_HOOK_CLI = /run/user/14653/vscode-ipc-7dc36815-7238-415d-8be0-4e392ec929af.sock
+VSCODE_IPC_HOOK_CLI = /run/user/14653/vscode-ipc-e3ddceaa-52a9-4ce3-8729-0145bf590f00.sock
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -126,7 +131,7 @@ LMOD_sys = Linux
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
-HOSTNAME = flip1.engr.oregonstate.edu
+HOSTNAME = flip2.engr.oregonstate.edu
 # environment
 MAKELEVEL := 0
 # default
@@ -136,7 +141,7 @@ MAKECMDGOALS := all
 # environment
 SHLVL = 5
 # environment
-XDG_SESSION_ID = 12716
+XDG_SESSION_ID = 10506
 # environment
 USER = conkling
 # environment
@@ -165,7 +170,7 @@ MAKEFLAGS = Rrqp
 # environment
 MFLAGS = -Rrqp
 # environment
-SSH_CLIENT = 10.251.4.81 52433 22
+SSH_CLIENT = 10.207.18.209 49998 22
 # environment
 MAIL = /var/spool/mail/conkling
 # environment
@@ -208,6 +213,8 @@ MORE = -c
 QTINC = /usr/lib64/qt-3.3/include
 # default
 .RECIPEPREFIX := 
+# environment
+AUTOJUMP_ERROR_PATH = /nfs/stak/users/conkling/.local/share/autojump/errors.log
 # makefile
 .DEFAULT_GOAL := 
 # environment
@@ -215,7 +222,7 @@ LANG = C
 # environment
 VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 # variable set hash-table stats:
-# Load=99/1024=10%, Rehash=0, Collisions=8/118=7%
+# Load=101/1024=10%, Rehash=0, Collisions=8/120=7%
 
 # Pattern-specific Variable Values
 
@@ -282,15 +289,12 @@ GNUmakefile:
 # No general (`VPATH' variable) search path.
 
 # # of strings in strcache: 0 / lookups = 19 / hits = 19
- 
-make: *** No rule to make target `all'.  Stop.
-
 # # of strcache buffers: 1 (* 8176 B/buffer = 8176 B)
 # strcache used: total = 0 (149) / max = 0 / min = 8176 / avg = 0
 # strcache free: total = 0 (8027) / max = 0 / min = 8176 / avg = 0
 
 # strcache hash-table stats:
 # Load=16/8192=0%, Rehash=0, Collisions=1/19=5%
-# Finished Make data base on Thu Jun 30 08:36:16 2022
+# Finished Make data base on Fri Jul  1 12:49:04 2022
 
  
