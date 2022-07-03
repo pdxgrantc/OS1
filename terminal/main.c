@@ -62,10 +62,13 @@ int arg_parser(struct Ary *command, struct Current_dir *dir)
     else if (strncmp(str, "pwd", 3) == 0) {
         pwd(dir);
     }
-    else {
+		else if (strncmp(str, "help", 4) == 0) {
+				help();
+		}
+		else {
         printf("Unknown command\n");
     }
-    free(str);
+		free(str);
     return 1;
 }
 

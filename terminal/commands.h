@@ -43,4 +43,13 @@ void ls();
  */
 void pwd(struct Current_dir *dir);
 
+/*
+ * Function: help
+ * ---------------------------
+ *  Prints the help.txt file in the directory helper_files.
+ *  Returns nothing.
+ *  Takes no arguments.
+ */
+void help();
+
 #endif

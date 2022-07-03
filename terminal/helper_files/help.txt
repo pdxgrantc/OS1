@@ -1,0 +1,7 @@
+GASH shell help
+-----------------------------------
+Commands supported:
+pwd: print working directory
+ls: list files in working directory
+clear: clears terminal
+exit: exit the GASH terminal

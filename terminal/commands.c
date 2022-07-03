@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <dirent.h>
+//#include <conio.h>
 
 #include "dynamic_ary.h"
 #include "commands.h"
@@ -30,4 +31,17 @@ void ls()
 void pwd(struct Current_dir *dir)
 {
     printf("%s\n", dir->path);
+}
+
+void help()
+{
+    int c;
+    FILE *file;
+    file = fopen("./helper_files/help.txt", "r");
+    if (file) {
+        while ((c = getc(file)) != EOF)
+            putchar(c);
+        fclose(file);
+    }
+    printf("\n");
 }
